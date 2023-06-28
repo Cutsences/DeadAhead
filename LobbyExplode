@@ -1,0 +1,51 @@
+local ohString1 = "hit"
+local ohInstance2 = game:GetService("ReplicatedStorage").projectiles["PROJECTILE_MODEL;IBasicBullet"].projectileProperties.PROJCFG
+local ohEnumItem5 = Enum.Material.Metal
+local ohVector37 = Vector3.new(0, 0, 1)
+local ohTable8 = {
+    ["muzzlePart"] = "",
+    ["playerOwner"] = game.Players.LocalPlayer,
+    ["timeFired"] = 1686579016.6562643,
+    ["shellModelObj"] = ""
+}
+
+local whitelist = {}
+
+
+
+while wait() do
+if _G.enabled == true then
+    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
+        if teamFolder:IsA("Folder") then
+            for _, player in ipairs(teamFolder:GetDescendants()) do
+                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
+                    table.insert(whitelist, player.Name)
+                end
+            end
+        end
+    end
+
+
+    
+    
+
+    
+    for i, v in pairs(game.Workspace.Lobbies:GetDescendants()) do
+        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+            local pos = v.Position
+            local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+
+            wait(0.000000000000000000000000000000000001)
+            game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
+        end
+    end
+    
+    else
+
+break
+
+    end
+    
+    
+end
