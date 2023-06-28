@@ -40,18 +40,19 @@ local Window = Rayfield:CreateWindow({
    
 
 _G.enabled = Value
-
 local ohString1 = "hit"
 local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
+    ["muzzlePart"] = "",
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
+    ["shellModelObj"] = ""
 }
 
+
+ 
  
 
 
@@ -109,11 +110,14 @@ local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren(
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
+    ["muzzlePart"] = "",
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
+    ["shellModelObj"] = ""
 }
+
+
+ 
 
 
  
@@ -305,18 +309,19 @@ task.spawn(function()
     Callback = function(Value)
     
 _G.AAEnabled = Value
- local ohString1 = "hit"
+local ohString1 = "hit"
 local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
+    ["muzzlePart"] = "",
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
+    ["shellModelObj"] = ""
 }
 
 
+ 
  
 
 
@@ -364,16 +369,19 @@ end
     Callback = function(Value)
     
 _G.ABEnabled = Value
- local ohString1 = "hit"
+local ohString1 = "hit"
 local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
+    ["muzzlePart"] = "",
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
+    ["shellModelObj"] = ""
 }
+
+
+ 
 
 
  
@@ -427,7 +435,7 @@ end
     
 _G.explodeL = Value
 local ohString1 = "hit"
-local ohInstance2 = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -436,6 +444,9 @@ local ohTable8 = {
     ["timeFired"] = 1686579016.6562643,
     ["shellModelObj"] = ""
 }
+
+
+ 
 
  
 
