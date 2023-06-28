@@ -42,7 +42,7 @@ local Window = Rayfield:CreateWindow({
 _G.enabled = Value
 
 local ohString1 = "hit"
-local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -113,7 +113,7 @@ end
     
 _G.AEnabled = Value
 local ohString1 = "hit"
-local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -321,7 +321,7 @@ task.spawn(function()
     
 _G.AAEnabled = Value
 local ohString1 = "hit"
-local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -387,7 +387,7 @@ end
     
 _G.ABEnabled = Value
 local ohString1 = "hit"
-local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -456,7 +456,7 @@ end
     
 _G.explodeL = Value
 local ohString1 = "hit"
-local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohInstance2 = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
