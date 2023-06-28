@@ -1,0 +1,514 @@
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Cutsences - Dead Ahead",
+    LoadingTitle = "Dead Ahead Script",
+    LoadingSubtitle = "by Cutsences",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Untitled",
+       Subtitle = "Key System",
+       Note = "No method of obtaining the key is provided",
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+
+ local Tab = Window:CreateTab("Ships", 4483362458) -- Title, Image
+
+ local Section = Tab:CreateSection("Explode")
+
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Explode Orion",
+    CurrentValue = false,
+    Flag = "orion", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+   
+
+_G.enabled = Value
+
+local ohString1 = "hit"
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohEnumItem5 = Enum.Material.Metal
+local ohVector37 = Vector3.new(0, 0, 1)
+local ohTable8 = {
+    ["muzzlePart"] = "",
+    ["playerOwner"] = game.Players.LocalPlayer,
+    ["timeFired"] = 1686579016.6562643,
+    ["shellModelObj"] = ""
+}
+
+local whitelist = {}
+
+
+while wait() do
+if _G.enabled == true then
+
+    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
+        if teamFolder:IsA("Folder") then
+            for _, player in ipairs(teamFolder:GetDescendants()) do
+                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
+                    table.insert(whitelist, player.Name)
+                end
+            end
+        end
+    end
+
+
+    
+    
+
+    
+    for i, v in pairs(game.Workspace.Orion.Orion:GetDescendants()) do
+        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+           if _G.enabled == true then
+           
+            local pos = v.Position
+            local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+
+            wait(0.000000000000000000000000000000000001)
+            game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
+           else
+
+            break
+           end
+        end
+    end
+    
+    
+    else
+    
+    
+    break
+    
+    end
+    
+    
+end
+
+    end,
+ })
+
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Explode Antares",
+    CurrentValue = false,
+    Flag = "antares", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    
+_G.AEnabled = Value
+local ohString1 = "hit"
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohEnumItem5 = Enum.Material.Metal
+local ohVector37 = Vector3.new(0, 0, 1)
+local ohTable8 = {
+    ["muzzlePart"] = "",
+    ["playerOwner"] = game.Players.LocalPlayer,
+    ["timeFired"] = 1686579016.6562643,
+    ["shellModelObj"] = ""
+}
+
+local whitelist = {}
+
+
+while wait() do
+if _G.AEnabled == true then
+    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
+        if teamFolder:IsA("Folder") then
+            for _, player in ipairs(teamFolder:GetDescendants()) do
+                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
+                    table.insert(whitelist, player.Name)
+                end
+            end
+        end
+    end
+
+
+    
+    
+
+    
+    for i, v in pairs(game.Workspace.Antares.Antares:GetDescendants()) do
+        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+            if _G.AEnabled == true then
+            local pos = v.Position
+            local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+
+            wait(0.000000000000000000000000000000000001)
+            game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
+            else
+                break
+            end
+        end
+    end
+    
+    
+    else
+    
+    break
+    
+    end
+    
+    
+end
+
+    end,
+ })
+
+ local Section = Tab:CreateSection("Voice Commands")
+
+
+
+local Dropdown = Tab:CreateDropdown({
+   Name = "Voice Commands",
+   Options = {"DamageControl","CeaseFire","Fire","WarshipSpotted","Bearing0","Bearing135","Bearing180","Bearing225","Bearing270","Bearing315","Bearing45","Bearing90"},
+   CurrentOption = {"DamageControl"},
+   MultipleOptions = false,
+   Flag = "dfshgj", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Option)
+
+_G.VC = Option
+   
+
+
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+    Name = "Loop Spam all ships",
+    CurrentValue = false,
+    Flag = "loopspam", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+   
+_G.loop = Value
+
+while wait(2.5) do
+    
+if _G.loop == true then
+        for i, v in pairs(game.Workspace:GetDescendants()) do
+            if v.Name == "VC" and _G.loop == true then
+               
+                v:FireServer(_G.VC) 
+
+            else
+                break
+            end
+        end
+    
+    
+else
+    break
+end
+end
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Play Voice command all ships",
+    Callback = function()
+    
+        for i, v in pairs(game.Workspace:GetDescendants()) do
+            if v.Name == "VC" then
+               
+                v:FireServer(_G.VC) 
+
+          
+            end
+        end
+
+    end,
+ })
+
+ local Tab = Window:CreateTab("Useful", 4483362458) -- Title, Image
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Loop Extinguish (MUST HAVE Fire Extinguisher)",
+    CurrentValue = false,
+    Flag = "extiguish", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    
+_G.Extinguish = Value
+
+while wait() do 
+    for i,v in pairs(game.Workspace:GetDescendants()) do
+    if v:IsA("BasePart") or v:IsA("UnionOperation") then
+    if _G.Extinguish == true then
+    wait(0.0000000000000000000000000001)
+    
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fire Extinguisher") then
+
+    game:GetService("Players").LocalPlayer.Character["Fire Extinguisher"].Extinguish:FireServer(v)
+
+
+    end
+
+    game:GetService("Players").LocalPlayer.Backpack["Fire Extinguisher"].Extinguish:FireServer(v)
+    else
+break
+    end
+    end
+    end
+    end
+
+
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Infinite Yield",
+    Callback = function()
+        
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+
+
+
+
+task.spawn(function()
+           while task.wait() do
+             setsimulationradius(10000000000000,100000000000000)
+           end
+           end)
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Remove AutoFarm anti kick",
+    Callback = function()
+        
+        game:GetService("StarterPlayer").StarterPlayerScripts.AntiautofarmKick:Destroy()
+        game:GetService("Players").LocalPlayer.PlayerScripts.AntiautofarmKick:Destroy()
+    end,
+ })
+
+ local Section = Tab:CreateSection("Character")
+
+ local Button = Tab:CreateButton({
+    Name = "Become bald",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RequestUniform:FireServer("Naval")
+    end,
+ })
+
+
+
+ local Tab = Window:CreateTab("Aircraft", 4483362458) -- Title, Image
+
+ local Section = Tab:CreateSection("Aircraft")
+
+ 
+ local Toggle = Tab:CreateToggle({
+    Name = "Explode Antares Aircraft",
+    CurrentValue = false,
+    Flag = "antares", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    
+_G.AAEnabled = Value
+local ohString1 = "hit"
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohEnumItem5 = Enum.Material.Metal
+local ohVector37 = Vector3.new(0, 0, 1)
+local ohTable8 = {
+    ["muzzlePart"] = "",
+    ["playerOwner"] = game.Players.LocalPlayer,
+    ["timeFired"] = 1686579016.6562643,
+    ["shellModelObj"] = ""
+}
+
+local whitelist = {}
+
+
+while wait() do
+if _G.AAEnabled == true then
+    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
+        if teamFolder:IsA("Folder") then
+            for _, player in ipairs(teamFolder:GetDescendants()) do
+                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
+                    table.insert(whitelist, player.Name)
+                end
+            end
+        end
+    end
+
+
+    
+    
+
+    
+    for i, v in pairs(workspace.Antares.Antares.Aircraft:GetDescendants()) do
+        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+            if _G.AAEnabled == true then
+            local pos = v.Position
+            local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+
+            wait(0.000000000000000000000000000000000001)
+            game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
+            else
+                break
+            end
+        end
+    end
+    
+    
+    else
+    
+    break
+    
+    end
+    
+    
+end
+
+    end,
+ })
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Explode Orion Aircraft",
+    CurrentValue = false,
+    Flag = "antares", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    
+_G.ABEnabled = Value
+local ohString1 = "hit"
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohEnumItem5 = Enum.Material.Metal
+local ohVector37 = Vector3.new(0, 0, 1)
+local ohTable8 = {
+    ["muzzlePart"] = "",
+    ["playerOwner"] = game.Players.LocalPlayer,
+    ["timeFired"] = 1686579016.6562643,
+    ["shellModelObj"] = ""
+}
+
+local whitelist = {}
+
+
+while wait() do
+if _G.ABEnabled == true then
+    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
+        if teamFolder:IsA("Folder") then
+            for _, player in ipairs(teamFolder:GetDescendants()) do
+                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
+                    table.insert(whitelist, player.Name)
+                end
+            end
+        end
+    end
+
+
+    
+    
+
+    
+    for i, v in pairs(workspace.Orion.Orion.Aircraft:GetDescendants()) do
+        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+            if _G.ABEnabled == true then
+            local pos = v.Position
+            local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+
+            wait(0.000000000000000000000000000000000001)
+            game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
+            else
+                break
+            end
+        end
+    end
+    
+    
+    else
+    
+    break
+    
+    end
+    
+    
+end
+
+    end,
+ })
+
+ local Section = Tab:CreateSection("Misc")
+
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Lag/Explode lobby",
+    CurrentValue = false,
+    Flag = "vd", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    
+_G.explodeL = Value
+local ohString1 = "hit"
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[777].projectileProperties.PROJCFG
+local ohEnumItem5 = Enum.Material.Metal
+local ohVector37 = Vector3.new(0, 0, 1)
+local ohTable8 = {
+    ["muzzlePart"] = "",
+    ["playerOwner"] = game.Players.LocalPlayer,
+    ["timeFired"] = 1686579016.6562643,
+    ["shellModelObj"] = ""
+}
+
+local whitelist = {}
+
+
+while wait() do
+    if _G.explodeL == true then
+        for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
+            if teamFolder:IsA("Folder") then
+                for _, player in ipairs(teamFolder:GetDescendants()) do
+                    if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
+                        table.insert(whitelist, player.Name)
+                    end
+                end
+            end
+        end
+    
+    
+        
+        
+    
+        
+        for i, v in pairs(game.Workspace.Lobbies:GetDescendants()) do
+            if v:IsA("BasePart") or v:IsA("UnionOperation") then
+                if _G.explodeL == true then
+                local pos = v.Position
+                local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
+                local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+    
+                wait(0.000000000000000000000000000000000001)
+                game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
+                else
+                    break
+                end
+            end
+        end
+        
+        else
+    
+    break
+    
+        end
+        
+        
+    end
+
+    end,
+ })
