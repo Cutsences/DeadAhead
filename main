@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
     LoadingTitle = "Dead Ahead Script",
     LoadingSubtitle = "by Cutsences",
     ConfigurationSaving = {
-       Enabled = false,
+       Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
        FileName = "Big Hub"
     },
@@ -46,27 +46,19 @@ local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren(
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = "",
+    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = ""
+    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
 }
 
-local whitelist = {}
+ 
 
 
 while wait() do
 if _G.enabled == true then
 
-    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
-        if teamFolder:IsA("Folder") then
-            for _, player in ipairs(teamFolder:GetDescendants()) do
-                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
-                    table.insert(whitelist, player.Name)
-                end
-            end
-        end
-    end
+    
 
 
     
@@ -74,7 +66,7 @@ if _G.enabled == true then
 
     
     for i, v in pairs(game.Workspace.Orion.Orion:GetDescendants()) do
-        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+        if v:IsA("BasePart") or v:IsA("UnionOperation")  then
            if _G.enabled == true then
            
             local pos = v.Position
@@ -117,26 +109,19 @@ local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren(
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = "",
+    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = ""
+    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
 }
 
-local whitelist = {}
+
+ 
 
 
 while wait() do
 if _G.AEnabled == true then
-    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
-        if teamFolder:IsA("Folder") then
-            for _, player in ipairs(teamFolder:GetDescendants()) do
-                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
-                    table.insert(whitelist, player.Name)
-                end
-            end
-        end
-    end
+    
 
 
     
@@ -144,7 +129,7 @@ if _G.AEnabled == true then
 
     
     for i, v in pairs(game.Workspace.Antares.Antares:GetDescendants()) do
-        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+        if v:IsA("BasePart") or v:IsA("UnionOperation")  then
             if _G.AEnabled == true then
             local pos = v.Position
             local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
@@ -320,31 +305,24 @@ task.spawn(function()
     Callback = function(Value)
     
 _G.AAEnabled = Value
-local ohString1 = "hit"
+ local ohString1 = "hit"
 local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = "",
+    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = ""
+    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
 }
 
-local whitelist = {}
+
+ 
 
 
 while wait() do
 if _G.AAEnabled == true then
-    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
-        if teamFolder:IsA("Folder") then
-            for _, player in ipairs(teamFolder:GetDescendants()) do
-                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
-                    table.insert(whitelist, player.Name)
-                end
-            end
-        end
-    end
+    
 
 
     
@@ -352,7 +330,7 @@ if _G.AAEnabled == true then
 
     
     for i, v in pairs(workspace.Antares.Antares.Aircraft:GetDescendants()) do
-        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+        if v:IsA("BasePart") or v:IsA("UnionOperation")   then
             if _G.AAEnabled == true then
             local pos = v.Position
             local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
@@ -386,31 +364,24 @@ end
     Callback = function(Value)
     
 _G.ABEnabled = Value
-local ohString1 = "hit"
+ local ohString1 = "hit"
 local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[128].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
-    ["muzzlePart"] = "",
+    ["muzzlePart"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128],
     ["playerOwner"] = game.Players.LocalPlayer,
     ["timeFired"] = 1686579016.6562643,
-    ["shellModelObj"] = ""
+    ["shellModelObj"] = game:GetService("ReplicatedStorage").projectiles:GetChildren()[128]
 }
 
-local whitelist = {}
+
+ 
 
 
 while wait() do
 if _G.ABEnabled == true then
-    for _, teamFolder in ipairs(game.Workspace:GetChildren()) do
-        if teamFolder:IsA("Folder") then
-            for _, player in ipairs(teamFolder:GetDescendants()) do
-                if player:IsA("BasePart") and player:IsA("Humanoid") and not table.find(whitelist, player.Name) then
-                    table.insert(whitelist, player.Name)
-                end
-            end
-        end
-    end
+    
 
 
     
@@ -418,7 +389,7 @@ if _G.ABEnabled == true then
 
     
     for i, v in pairs(workspace.Orion.Orion.Aircraft:GetDescendants()) do
-        if (v:IsA("BasePart") or v:IsA("UnionOperation")) and not table.find(whitelist, v.Name) then
+        if v:IsA("BasePart") or v:IsA("UnionOperation")  then
             if _G.ABEnabled == true then
             local pos = v.Position
             local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
@@ -466,7 +437,7 @@ local ohTable8 = {
     ["shellModelObj"] = ""
 }
 
-local whitelist = {}
+ 
 
 
 while wait() do
