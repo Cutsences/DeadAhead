@@ -1,0 +1,14 @@
+
+while wait() do 
+if _G.damage == true then
+    for i, v in pairs(game.Workspace:GetDescendants()) do
+        if v.Name == "VC" then
+       
+            v:FireServer("DamageControl") -- Use the randomly selected text variable in FireServer call
+        end
+    end
+    else
+    
+    break
+    end
+end
