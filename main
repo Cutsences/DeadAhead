@@ -41,7 +41,7 @@ local Window = Rayfield:CreateWindow({
 
 _G.enabled = Value
 local ohString1 = "hit"
-local ohInstance2 = game:GetService("ReplicatedStorage").projectiles["PROJECTILE_MODEL;IBasicBullet"].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[1662].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -72,7 +72,7 @@ if _G.enabled == true then
            
             local pos = v.Position
             local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
-            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000)
 
             wait(0.000000000000000000000000000000000001)
             game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
@@ -106,7 +106,7 @@ end
     
 _G.AEnabled = Value
 local ohString1 = "hit"
-local ohInstance2 = game:GetService("ReplicatedStorage").projectiles["PROJECTILE_MODEL;IBasicBullet"].projectileProperties.PROJCFG
+local ohInstance2 = game:GetService("ReplicatedStorage").projectiles:GetChildren()[1662].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -135,7 +135,7 @@ if _G.AEnabled == true then
             if _G.AEnabled == true then
             local pos = v.Position
             local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
-            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000)
 
             wait(0.000000000000000000000000000000000001)
             game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
@@ -308,7 +308,7 @@ task.spawn(function()
     
 _G.AAEnabled = Value
 local ohString1 = "hit"
-local ohInstance2 = game:GetService("ReplicatedStorage").projectiles["PROJECTILE_MODEL;IBasicBullet"].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[1662].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -337,7 +337,7 @@ if _G.AAEnabled == true then
             if _G.AAEnabled == true then
             local pos = v.Position
             local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
-            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000)
 
             wait(0.000000000000000000000000000000000001)
             game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
@@ -368,7 +368,7 @@ end
     
 _G.ABEnabled = Value
 local ohString1 = "hit"
-local ohInstance2 = game:GetService("ReplicatedStorage").projectiles["PROJECTILE_MODEL;IBasicBullet"].projectileProperties.PROJCFG
+local ohInstance2 = game:GetService("ReplicatedStorage").projectiles:GetChildren()[1662].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
@@ -399,7 +399,7 @@ if _G.ABEnabled == true then
             if _G.ABEnabled == true then
             local pos = v.Position
             local ohVector36 = Vector3.new(pos.X, pos.Y, pos.Z)
-            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999)
+            local ohCFrame3 = CFrame.new(pos.X, pos.Y, pos.Z, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000)
 
             wait(0.000000000000000000000000000000000001)
             game:GetService("ReplicatedStorage").projectiles.projectile:FireServer(ohString1, ohInstance2, ohCFrame3, v, ohEnumItem5, ohVector36, ohVector37, ohTable8)
@@ -433,7 +433,7 @@ end
     
 _G.explodeL = Value
 local ohString1 = "hit"
-local ohInstance2 = game:GetService("ReplicatedStorage").projectiles["PROJECTILE_MODEL;IBasicBullet"].projectileProperties.PROJCFG
+local ohInstance2 =game:GetService("ReplicatedStorage").projectiles:GetChildren()[1662].projectileProperties.PROJCFG
 local ohEnumItem5 = Enum.Material.Metal
 local ohVector37 = Vector3.new(0, 0, 1)
 local ohTable8 = {
